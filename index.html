@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Casa & Mesa — organize as ementas semanais da família, gere receitas e crie a lista de compras.">
+  <meta name="theme-color" content="#557560">
+  <title>Casa & Mesa — Ementa semanal</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23557560'/%3E%3Cpath d='M18 46c0-16 10-27 30-29-2 20-14 29-30 29z' fill='%23f7f4ec'/%3E%3Cpath d='M18 46 36 28' stroke='%23557560' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-6h4v6"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></symbol>
+      <symbol id="i-book" viewBox="0 0 24 24"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H7a2 2 0 0 0-2 2z"/><path d="M5 20a2 2 0 0 0 2 2h12v-4"/></symbol>
+      <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2.5l2.2 11h10.6L21 7.5H6.4"/><circle cx="9.5" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></symbol>
+      <symbol id="i-settings" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></symbol>
+      <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+      <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+      <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M11 3l1.8 4.7 4.7 1.8-4.7 1.8L11 16l-1.8-4.7L4.5 9.5l4.7-1.8z"/><path d="M18.5 14.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></symbol>
+      <symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M3 7h3.5c2 0 3.2 1 4.3 2.7l2.4 4.6c1.1 1.7 2.3 2.7 4.3 2.7H21"/><path d="M3 17h3.5c1.2 0 2.1-.4 2.9-1.1M14.6 8.1c.8-.7 1.7-1.1 2.9-1.1H21"/><path d="m18 4 3 3-3 3M18 14l3 3-3 3"/></symbol>
+      <symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="m13.5 6.5 4 4"/></symbol>
+      <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+      <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18.5 14.8c1.7.8 2.7 2.5 3 5.2"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></symbol>
+      <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 15V3M7 8l5-5 5 5M4 21h16"/></symbol>
+      <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></symbol>
+      <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-14 15-15-1 10-7 15-15 15z"/><path d="M5 19 14 10"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="appbar no-print">
+    <div class="appbar-inner">
+      <a class="brand" href="#inicio" aria-label="Casa & Mesa — Início">
+        <span class="brand-mark"><svg class="ic"><use href="#i-leaf"/></svg></span>
+        <span class="brand-text"><strong>Casa &amp; Mesa</strong><small>Menos decisões. Mais tempo à mesa.</small></span>
+      </a>
+      <nav class="topnav" aria-label="Navegação principal">
+        <a href="#inicio" data-nav="inicio"><svg class="ic"><use href="#i-home"/></svg>Início</a>
+        <a href="#calendario" data-nav="calendario"><svg class="ic"><use href="#i-calendar"/></svg>Calendário</a>
+        <a href="#receitas" data-nav="receitas"><svg class="ic"><use href="#i-book"/></svg>Receitas</a>
+        <a href="#compras" data-nav="compras"><svg class="ic"><use href="#i-cart"/></svg>Compras<span class="nav-badge" data-shop-badge hidden></span></a>
+        <a href="#definicoes" data-nav="definicoes"><svg class="ic"><use href="#i-settings"/></svg>Definições</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- INÍCIO -->
+    <section class="view" id="view-inicio" aria-labelledby="homeGreeting">
+      <div class="hero">
+        <p class="eyebrow" id="homeDate"></p>
+        <h1 id="homeGreeting">Olá</h1>
+        <p class="muted">O que vai para a mesa hoje.</p>
+      </div>
+      <div class="home-grid">
+        <article class="card today-card">
+          <div class="card-head"><h2>Hoje</h2><a class="link" href="#calendario">Ver semana</a></div>
+          <div class="today-meals" id="todayMeals"></div>
+        </article>
+        <article class="card">
+          <div class="card-head"><h2>Esta semana</h2><span class="muted small" id="homeWeekRange"></span></div>
+          <div id="homeProgress"></div>
+          <button class="btn btn-primary btn-block" data-action="auto-week" data-week="0"><svg class="ic"><use href="#i-sparkle"/></svg>Gerar ementa automática</button>
+        </article>
+        <article class="card">
+          <div class="card-head"><h2>Pessoas à mesa</h2></div>
+          <p class="muted small">As quantidades das receitas e da lista de compras ajustam-se automaticamente.</p>
+          <div class="stepper-wrap" data-stepper-slot></div>
+        </article>
+        <a class="card card-link" href="#compras">
+          <div class="card-head"><h2>Lista de compras</h2><svg class="ic muted-ic"><use href="#i-right"/></svg></div>
+          <p class="muted" id="homeShopping"></p>
+        </a>
+      </div>
+    </section>
+
+    <!-- CALENDÁRIO -->
+    <section class="view" id="view-calendario" aria-labelledby="calTitle" hidden>
+      <div class="view-head">
+        <div>
+          <h1 id="calTitle">Calendário</h1>
+          <p class="muted" id="weekRange"></p>
+        </div>
+        <div class="weeknav no-print" role="group" aria-label="Navegar entre semanas">
+          <button class="icon-btn" data-action="week-prev" aria-label="Semana anterior"><svg class="ic"><use href="#i-left"/></svg></button>
+          <button class="chip" data-action="week-today">Esta semana</button>
+          <button class="icon-btn" data-action="week-next" aria-label="Semana seguinte"><svg class="ic"><use href="#i-right"/></svg></button>
+        </div>
+      </div>
+      <div class="progress-card" id="weekProgress"></div>
+      <div class="toolbar no-print">
+        <button class="btn btn-primary" data-action="auto-week"><svg class="ic"><use href="#i-sparkle"/></svg>Gerar ementa</button>
+        <button class="btn" data-action="fill-week"><svg class="ic"><use href="#i-plus"/></svg>Preencher vazios</button>
+        <button class="btn" data-action="clear-week"><svg class="ic"><use href="#i-trash"/></svg>Limpar semana</button>
+        <button class="btn" data-action="print-week"><svg class="ic"><use href="#i-print"/></svg>Imprimir</button>
+      </div>
+      <div class="week" id="weekGrid"></div>
+      <p class="hint no-print">Toque numa refeição para ver a receita, sugerir outro prato ou escolher da lista.</p>
+    </section>
+
+    <!-- RECEITAS -->
+    <section class="view" id="view-receitas" aria-labelledby="recTitle" hidden>
+      <div class="view-head">
+        <div>
+          <h1 id="recTitle">Receitas</h1>
+          <p class="muted" id="recipeCount"></p>
+        </div>
+        <div class="row">
+          <button class="btn" data-action="add-library"><svg class="ic"><use href="#i-sparkle"/></svg>Receitas sugeridas</button>
+          <button class="btn btn-primary" data-action="new-recipe"><svg class="ic"><use href="#i-plus"/></svg>Nova receita</button>
+        </div>
+      </div>
+      <label class="search">
+        <svg class="ic"><use href="#i-search"/></svg>
+        <input id="recipeSearch" type="search" placeholder="Pesquisar por nome ou ingrediente" aria-label="Pesquisar receitas" autocomplete="off">
+      </label>
+      <div class="recipe-grid" id="recipeGrid"></div>
+    </section>
+
+    <!-- COMPRAS -->
+    <section class="view" id="view-compras" aria-labelledby="shopTitle" hidden>
+      <div class="view-head">
+        <div>
+          <h1 id="shopTitle">Lista de compras</h1>
+          <p class="muted" id="shopRange"></p>
+        </div>
+        <div class="weeknav no-print" role="group" aria-label="Navegar entre semanas">
+          <button class="icon-btn" data-action="week-prev" aria-label="Semana anterior"><svg class="ic"><use href="#i-left"/></svg></button>
+          <button class="chip" data-action="week-today">Esta semana</button>
+          <button class="icon-btn" data-action="week-next" aria-label="Semana seguinte"><svg class="ic"><use href="#i-right"/></svg></button>
+        </div>
+      </div>
+      <form class="add-item no-print" id="manualForm" autocomplete="off">
+        <input id="manualInput" placeholder="Ex.: leite, 1 l" aria-label="Adicionar produto à lista">
+        <button class="btn btn-primary" type="submit"><svg class="ic"><use href="#i-plus"/></svg><span>Adicionar</span></button>
+      </form>
+      <div class="progress-card" id="shopProgress"></div>
+      <div class="toolbar no-print">
+        <button class="btn" data-action="copy-list"><svg class="ic"><use href="#i-copy"/></svg>Copiar</button>
+        <button class="btn" data-action="print-list"><svg class="ic"><use href="#i-print"/></svg>Imprimir</button>
+        <button class="btn" data-action="uncheck-all"><svg class="ic"><use href="#i-refresh"/></svg>Desmarcar tudo</button>
+      </div>
+      <div id="shopList"></div>
+    </section>
+
+    <!-- DEFINIÇÕES -->
+    <section class="view" id="view-definicoes" aria-labelledby="setTitle" hidden>
+      <div class="view-head"><div><h1 id="setTitle">Definições</h1><p class="muted">Preferências da casa e gestão dos dados.</p></div></div>
+      <div class="settings">
+        <article class="card">
+          <h2>Pessoas à mesa</h2>
+          <p class="muted small">Entre 1 e 20 pessoas. Usado para ajustar quantidades.</p>
+          <div class="stepper-wrap" data-stepper-slot></div>
+        </article>
+        <article class="card">
+          <h2>Receitas</h2>
+          <p class="muted small" id="libraryInfo"></p>
+          <button class="btn" data-action="add-library"><svg class="ic"><use href="#i-sparkle"/></svg>Adicionar receitas sugeridas</button>
+        </article>
+        <article class="card">
+          <h2>Cópia de segurança</h2>
+          <p class="muted small">Os dados ficam guardados apenas neste navegador e não são sincronizados entre dispositivos. Exporte um ficheiro para os guardar ou passar para outro dispositivo.</p>
+          <div class="row">
+            <button class="btn" data-action="export"><svg class="ic"><use href="#i-download"/></svg>Exportar dados</button>
+            <button class="btn" data-action="import"><svg class="ic"><use href="#i-upload"/></svg>Importar dados</button>
+            <input type="file" id="importFile" accept="application/json,.json" hidden>
+          </div>
+        </article>
+        <article class="card danger-zone">
+          <h2>Repor aplicação</h2>
+          <p class="muted small">Apaga receitas, ementas e lista de compras deste navegador e volta ao início.</p>
+          <button class="btn btn-danger" data-action="reset"><svg class="ic"><use href="#i-trash"/></svg>Apagar todos os dados</button>
+        </article>
+      </div>
+      <p class="hint">Casa &amp; Mesa · versão 4.0</p>
+    </section>
+  </main>
+
+  <nav class="bottomnav no-print" aria-label="Navegação principal">
+    <a href="#inicio" data-nav="inicio"><svg class="ic"><use href="#i-home"/></svg><span>Início</span></a>
+    <a href="#calendario" data-nav="calendario"><svg class="ic"><use href="#i-calendar"/></svg><span>Calendário</span></a>
+    <a href="#receitas" data-nav="receitas"><svg class="ic"><use href="#i-book"/></svg><span>Receitas</span></a>
+    <a href="#compras" data-nav="compras"><svg class="ic"><use href="#i-cart"/></svg><span>Compras</span><span class="nav-badge" data-shop-badge hidden></span></a>
+    <a href="#definicoes" data-nav="definicoes"><svg class="ic"><use href="#i-settings"/></svg><span>Definições</span></a>
+  </nav>
+
+  <!-- Refeição: ações e escolha de prato -->
+  <dialog id="mealSheet" class="sheet" aria-labelledby="mealSheetTitle">
+    <div class="sheet-inner">
+      <div class="sheet-head">
+        <div><p class="eyebrow" id="mealSheetWhen"></p><h2 id="mealSheetTitle"></h2></div>
+        <button class="icon-btn" data-action="close-dialog" aria-label="Fechar"><svg class="ic"><use href="#i-x"/></svg></button>
+      </div>
+      <div id="mealSheetBody"></div>
+    </div>
+  </dialog>
+
+  <!-- Ver receita -->
+  <dialog id="recipeSheet" class="sheet" aria-labelledby="recipeSheetTitle">
+    <div class="sheet-inner">
+      <div class="sheet-head">
+        <div><p class="eyebrow" id="recipeSheetMeta"></p><h2 id="recipeSheetTitle"></h2></div>
+        <button class="icon-btn" data-action="close-dialog" aria-label="Fechar"><svg class="ic"><use href="#i-x"/></svg></button>
+      </div>
+      <div id="recipeSheetBody"></div>
+    </div>
+  </dialog>
+
+  <!-- Criar / editar receita -->
+  <dialog id="editSheet" class="sheet" aria-labelledby="editTitle">
+    <form class="sheet-inner" id="editForm" novalidate>
+      <div class="sheet-head">
+        <h2 id="editTitle">Nova receita</h2>
+        <button class="icon-btn" type="button" data-action="close-dialog" aria-label="Fechar"><svg class="ic"><use href="#i-x"/></svg></button>
+      </div>
+      <div class="field"><label for="editName">Nome</label><input id="editName" placeholder="Ex.: Frango no forno" required></div>
+      <div class="field"><label for="editServings">Porções da receita</label><input id="editServings" type="number" min="1" max="100" inputmode="numeric" value="2"></div>
+      <div class="field">
+        <label for="editIngredients">Ingredientes (um por linha)</label>
+        <textarea id="editIngredients" rows="6" placeholder="300 g | frango&#10;2 un | batata&#10;1 colher | azeite"></textarea>
+        <span class="muted small">Formato: <code>quantidade unidade | ingrediente</code>. Unidades: g, kg, ml, l, un, colher, dente, lata, fatia… Também pode usar <code>q.b. | sal</code>.</span>
+      </div>
+      <div class="field"><label for="editInstructions">Preparação</label><textarea id="editInstructions" rows="5" placeholder="Descreva como preparar…"></textarea></div>
+      <p class="form-error" id="editError" role="alert" hidden></p>
+      <div class="sheet-actions">
+        <button class="btn" type="button" data-action="close-dialog">Cancelar</button>
+        <button class="btn btn-primary" type="submit">Guardar receita</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Confirmação -->
+  <dialog id="confirmDialog" class="modal" aria-labelledby="confirmText">
+    <div class="sheet-inner">
+      <p id="confirmText"></p>
+      <div class="sheet-actions">
+        <button class="btn" data-confirm="no">Cancelar</button>
+        <button class="btn btn-primary" data-confirm="yes" id="confirmOk">Confirmar</button>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/core.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
