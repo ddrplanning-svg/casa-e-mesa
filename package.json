@@ -1,0 +1,11 @@
+{
+  "name": "casa-e-mesa",
+  "version": "4.0.0",
+  "private": true,
+  "description": "Casa & Mesa — ementas semanais, receitas e lista de compras para famílias.",
+  "scripts": {
+    "test": "node --test tests/core.test.js",
+    "test:e2e": "node tests/e2e.js"
+  },
+  "license": "UNLICENSED"
+}
